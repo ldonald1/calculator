@@ -41,7 +41,21 @@ let currentExpression = "";
 display.textContent = currentExpression;
 
 allButtons.addEventListener("click", (e) => {
-    if(e.target.tagName === 'BUTTON'){
-        console.log("button was clicked.")
+    const button = e.target;
+    if(button.tagName === 'BUTTON' && !(button.classList.contains("equals")) && !(button.classList.contains("clear"))){
+        currentExpression+=button.textContent;
+        display.textContent = currentExpression;
     }
-})
+    else if(button.tagName === 'BUTTON' && button.classList.contains("equals")){
+        /*
+        operate()
+        currentExpression+=button.textContent;
+        display.textContent = currentExpression;
+        */
+    }
+
+    else if(button.tageName === 'BUTTON' && button.classList.contains("clear")){
+        currentExpression = "";
+        display.textContent = currentExpression;
+    }
+});
