@@ -30,3 +30,18 @@ function operate(op, arg1, arg2){
             break;
     }
 }
+
+const calculator = document.querySelector(".calculator");
+const display = document.querySelector(".display");
+const allButtons = document.querySelector(".allButtons");
+
+let currentExpression = "";
+
+display.textContent = currentExpression;
+
+allButtons.addEventListener("onclick", (e) => {
+    let button = e.target;
+    currentExpression += button.textContent;
+    display.textContent = currentExpression;
+    console.log(`${button} clicked.`);
+})
