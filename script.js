@@ -34,14 +34,14 @@ function operate(op, arg1, arg2){
 const calculator = document.querySelector(".calculator");
 const display = document.querySelector(".display");
 const allButtons = document.querySelector(".allButtons");
+const clear = document.querySelector("#clear");
 
 let currentExpression = "";
 
 display.textContent = currentExpression;
 
-allButtons.addEventListener("onclick", (e) => {
-    let button = e.target;
-    currentExpression += button.textContent;
-    display.textContent = currentExpression;
-    console.log(`${button} clicked.`);
+allButtons.addEventListener("click", (e) => {
+    if(e.target.tagName === 'BUTTON'){
+        console.log("button was clicked.")
+    }
 })
