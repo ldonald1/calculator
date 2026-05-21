@@ -54,7 +54,7 @@ allButtons.addEventListener("click", (e) => {
         */
     }
 
-    else if(button.tageName === 'BUTTON' && button.classList.contains("clear")){
+    else if(button.tagName === 'BUTTON' && button.classList.contains("clear")){
         currentExpression = "";
         display.textContent = currentExpression;
     }
