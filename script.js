@@ -97,7 +97,7 @@ allButtons.addEventListener("click", (e) => {
         // Calculate result of operations upon pressing equals button
     else if(button.tagName === 'BUTTON' && button.classList.contains("equals")){
         if(currentExpression === ""){
-            display.textContent = 'ERROR';
+            display.textContent = 'ERR: NO ARG';
             currentArg1 = null;
             currentOp = null;
             currentArg2 = null;
